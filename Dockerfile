@@ -64,6 +64,7 @@ USER rails:rails
 
 # Copy built artifacts: gems, application
 COPY --from=build --chown=rails:rails /usr/local/bundle /usr/local/bundle
+COPY --from=build --chown=rails:rails /rails/app /public
 COPY --from=build --chown=rails:rails /rails /rails
 
 # Entrypoint prepares the database.
