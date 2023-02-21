@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-cp -r /public /app/public
+cp -r /public /app
 
 # If running the rails server then create or migrate existing database
 if [ "${*}" == "./bin/rails server" ]; then
